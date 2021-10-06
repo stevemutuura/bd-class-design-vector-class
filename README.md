@@ -65,19 +65,19 @@ System.out.println(ab); // Vector: {x: 4, y: 6}
 ## Create the following arithmetic operations
 
 **Mutating**
-- `void add(Vector)` adds the components of another Vector to the 
+- `void add(Vector)` adds the components of another Vector to the
 original Vector.
-- `void sub(Vector)` subtract the components of another Vector to the 
+- `void sub(Vector)` subtract the components of another Vector to the
 original Vector.
-- `void mult(float)` multiplies each component of the Vector by a 
+- `void mult(float)` multiplies each component of the Vector by a
 scalar value.
 
 **Non-Mutating**
-- `Vector plus(Vector)` returns a new Vector whose components equal 
+- `Vector plus(Vector)` returns a new Vector whose components equal
 the sum of the original Vector and the input Vector.
-- `Vector minus(Vector)` returns a new Vector whose components equal 
+- `Vector minus(Vector)` returns a new Vector whose components equal
 the difference of the original Vector and the input Vector.
-- `Vector times(float)` returns a new Vector whose components are 
+- `Vector times(float)` returns a new Vector whose components are
 equal to the original Vector times the scalar value.
 
 ## Override the `toString()` Method
@@ -93,9 +93,9 @@ the object is stored. Something like:
 
 `math.Vector@6d06d69c`
 
-We can change this by **overriding** the `toString()` method. 
+We can change this by **overriding** the `toString()` method.
 IntelliJ does a good job of this automatically.
-From inside the Vector class, right-click and select 
+From inside the Vector class, right-click and select
 `Generate > toString()`.
 
 Choose both the `x` and the `y` field and press Ok. You should
@@ -142,7 +142,7 @@ Create two methods:
 `normalize()` mutates the Vector into a normalized version of itself.
 `normalized()` returns a new normalized Vector.
 
-**Hint:** store the result of the magnitude computation before 
+**Hint:** store the result of the magnitude computation before
 changing the value of the component fields. The magnitude will change
 after the first component changes.
 
@@ -152,7 +152,7 @@ The dot product measures how aligned two Vectors are, and is the key
 idea for this simple lighting example.
 
 Each surface has a **normal** (This is unrelated to a normalized
-Vector). This is a Vector that points perpendicular to its surface 
+Vector). This is a Vector that points perpendicular to its surface
 as shown:
 
 [image]
@@ -171,7 +171,7 @@ Vectors is:
 
 **Create a `dot(Vector)` method which returns a float equal to the
   dot product with the second Vector.**
-  
+
 ## Test your methods with the following:
 ```java
 Vector a = new Vector(1, 2);
@@ -195,11 +195,28 @@ Vector{x=0.4472136, y=0.8944272}
 
 ## Open the Github repo for LightVectors and import your Vector class
 
-There will be instructions in the [LightVectors repo](https://github.com/LambdaSchool/bd-methods-scope-and-class-design-light-vectors.git) 
+There will be instructions in the [LightVectors repo](https://github.com/LambdaSchool/bd-methods-scope-and-class-design-light-vectors.git)
 if you need additional help.
 
 ### A Completed Project Will
 
 Produce the output shown in the above section.
 
-Work properly with the LightVectors repo as shown below:
+Work properly with the LightVectors repo.
+
+## Extensions 1
+
+In order to make this class more versatile, update the fields with a z component.
+
+Create constructors that allow users to create 2D and 3D vectors, and update the existing methods to consider the z component.
+
+## Extensions 2
+
+There are some more standard Vector methods missing from this class. Implement any of the following suggestions:
+- Cross Product, returns a Vector
+- getDirection returns the angle of a 2D Vector
+- A static method `fromAngle` which creates a new 2D Vector from a given angle and direction
+- Rotate methods
+  - RotateAround might take in a Vector and a change in angle to rotate around the given vector.
+  - RotateX, RotateY, and RotateZ
+-
