@@ -28,7 +28,7 @@ Create a Vector Class
 
 Each Vector will be represented with an `x` and a `y` component.
 
-- Create a constructor whcih takes an `x` and a `y` number as well as
+- Create a constructor which takes an `x` and a `y` number as well as
 a default constructor.
 - Create Getters and Setters
 
