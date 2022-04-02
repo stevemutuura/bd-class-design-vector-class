@@ -1,3 +1,7 @@
+### Pre-Activity
+
+Look at the Playlist UML Class Diagram image. Write the class definition, instance variables, and method signatures which could implement the diagram. You will not be implementing the actual methods, just the signatures for each method.
+
 # Creating a Vector Class
 
 Vectors are a useful tool for visualizing abstract concepts across
